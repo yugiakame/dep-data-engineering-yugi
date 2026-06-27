@@ -1,4 +1,4 @@
-# The Philippine Digital Economy by Region: Who's Ahead and Who's Behind?
+# The Philippine Digital Economy by Region
 
 ## Problem Statement
 
