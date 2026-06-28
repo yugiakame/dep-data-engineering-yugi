@@ -21,6 +21,8 @@ I will explore:
 * Philippine Statistics Authority (PSA) Family Income and Expenditure Survey (FIES) 2023
 * https://openstat.psa.gov.ph/
 
+These are the most recent publicly available datasets. Because they were collected in different years (2022 and 2023), comparisons between the datasets may be affected by the year gap.
+
 ## Possible Final Dashboard
 
 The dashboard should help the decision-makers compare ICT sector performance and household income across Philippine regions to identify areas with strong digital economies, regions that may require additional support, and potential opportunities for future digital investment.
