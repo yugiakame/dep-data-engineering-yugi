@@ -4,23 +4,15 @@
 
 I want to answer: "Which Philippine regions should be prioritized for digital economy investment based on their ICT sector performance, and does household income level predict ICT productivity across regions?"
 
+The digital economy has become an important driver of economic growth, employment, and innovation. However, the level of ICT development varies across Philippine regions, and resources for digital infrastructure and investment are limited. By comparing ICT sector performance with household income, this project seeks to identify regions that are leading or lagging in digital development. The findings can help to make more informed decisions about where investments and development programs may have the greatest impact.
+
 ## Audience
 
 This project is for government policymakers and regional development planners who need to identify regions that are leading or lagging in digital development in order to prioritize investment and development programs.
 
 ## Key Performance Indicators (KPIs)
 
-The primary KPIs are:
-
-* ICT Revenue per Employee (ICT productivity)
-* Average Family Income
-
-Supporting metrics include:
-
-* ICT Revenue
-* ICT Employment
-* Number of ICT Establishments
-* Average Family Expenditure
+The main metrics I want to track are ICT sector performance and average household income across Philippine regions.
 
 ## Likely Data Sources
 
