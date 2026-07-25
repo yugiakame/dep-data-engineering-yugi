@@ -114,6 +114,10 @@ These are the most recent publicly available datasets. Because they were collect
 
 Most fallback sources listed above are from PSA OpenStat, as they contain the same or closely matching data as the primary sources and are the most reliable alternative if the primary source is unavailable. For primary sources without a listed fallback, no alternative was included because the original source was considered stable and accessible.
 
+## Ingestion Method
+
+All primary sources will be ingested via **manual file download** as xlsx/csv files. No API access or web scraping is required for this project, since all primary and fallback sources are publicly downloadable as static files.
+
 ## Possible Final Dashboard
 
 The dashboard will enable decision-makers to compare ICT business productivity, digital adoption, and household income across Philippine regions. Comparisons are descriptive — the dashboard flags regions where the three indicators don't align in the expected direction (e.g. high income but low ICT productivity, high internet usage but low ICT productivity, high ICT productivity despite lower income), highlighting regional strengths and gaps worth further investigation as a first step in digital economy investment prioritization. This depends on first reconciling the region-count mismatch between data sources (FIES reports 18 regions with Negros Island Region separated out, while ASPBI and NICTHS report 17 with Negros folded into Region VI and VII), detailed in the Data Source Notes.
