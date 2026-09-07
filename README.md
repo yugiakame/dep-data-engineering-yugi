@@ -92,6 +92,14 @@ These are the most recent publicly available datasets. Because they were collect
 - Why it fits the problem: Contains Number of Establishments, Total Employment, and Total Revenue in a single table, which are the exact raw inputs needed to compute both the primary KPI (ICT Revenue per Employee) and the supporting KPI (Number of ICT Establishments) without needing to merge in another table.
 - Known limitations: Single year only (2022), so no year-over-year trend for the ICT sector dimension; covers only formal, registered establishments that met the ASPBI survey threshold, likely excluding informal or freelance digital economy activity; **uses the 17-region structure (pre-Negros Island Region), which does not match the 18-region structure used in the 2023 FIES income data** — Negros-related figures will need to be reconciled before cross-dataset comparison; roughly a 1-2 year gap versus the 2023 FIES and 2024 NICTHS data.
 
+#### Fallback Source
+- Name: Summary Statistics for Information and Communication Establishments by Geolocation, Industry Description, Year and Data Items (PSA OpenStat)
+- URL: https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__2D__2022/0042D4BAJ00.px/
+- Format: csv/xlsx export from interactive web table
+- Coverage: 2022; **17 regions plus national total** (Negros Occidental and Negros Oriental still folded into Region VI and VII, no separate Negros Island Region row, same structure as the ASPBI primary source), with industry breakdown down to 14 sub-sectors under "Information and Communication"
+- Why it could still work: Contains the same core variables as the ASPBI primary source — Number of Establishments, Total Employment, Paid Employees, and Total Revenue, so it can still compute both the primary KPI (ICT Revenue per Employee) and the supporting KPI (Number of ICT Establishments) without needing to merge in another table. 
+- Known limitations: Same year (2022) and same 17-region structure as the ASPBI primary source, so it doesn't add a second year of coverage and **still requires the same Negros Island Region reconciliation against the 18-region FIES income data**. Revenue and employment figures may differ slightly from the ASPBI primary source's exact published table cuts since this is drawn from PSA's general OpenStat database rather than the ASPBI-specific publication page, so a cross-check between the two is advisable before final use.
+
 ---
 
 ### Internet Usage (Digital Adoption)
@@ -116,7 +124,7 @@ Most fallback sources listed above are from PSA OpenStat, as they contain the sa
 
 ## Ingestion Method
 
-All primary sources will be ingested via **manual file download** as xlsx/csv files. No API access or web scraping is required for this project, since all primary and fallback sources are publicly downloadable as static files.
+The FIES income data and ASPBI ICT performance data are ingested through their respective PSA OpenStat PXWeb APIs, enabling automated retrieval of the raw datasets. The internet usage data (NICTHS) is ingested through the Google Sheets XLSX export endpoint, allowing the published spreadsheet to be downloaded programmatically as an Excel file. All source data are stored in their original raw format prior to any cleaning or transformation. No web scraping or manual file download is required for the current ingestion process.
 
 ## Possible Final Dashboard
 
