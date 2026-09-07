@@ -1,11 +1,24 @@
+"""
+Phase 2 — Data Ingestion
+
+Downloads source datasets from live sources and stores them in data/raw/.
+The pull date and time are displayed in the execution log.
+Raw source files are not modified during ingestion.
+"""
+
 import os
 import requests
 import pandas as pd
 from io import StringIO
+from datetime import datetime
 
 RAW_DIR = "data/raw"
-
 os.makedirs(RAW_DIR, exist_ok=True)
+
+pull_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+print(f"\n========== DATA INGESTION ==========")
+print(f"Pull date and time: {pull_datetime}")
 
 def ingest_psa_dataset(url, output_filename):
 
