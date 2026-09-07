@@ -129,3 +129,44 @@ The FIES income data and ASPBI ICT performance data are ingested through their r
 ## Possible Final Dashboard
 
 The dashboard will enable decision-makers to compare ICT business productivity, digital adoption, and household income across Philippine regions. Comparisons are descriptive — the dashboard flags regions where the three indicators don't align in the expected direction (e.g. high income but low ICT productivity, high internet usage but low ICT productivity, high ICT productivity despite lower income), highlighting regional strengths and gaps worth further investigation as a first step in digital economy investment prioritization. This depends on first reconciling the region-count mismatch between data sources (FIES reports 18 regions with Negros Island Region separated out, while ASPBI and NICTHS report 17 with Negros folded into Region VI and VII), detailed in the Data Source Notes.
+
+# Setup Instructions
+
+## Requirements
+
+- Python 3.10 or later
+
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/yugiakame/dep-data-engineering-yugi.git
+cd dep-data-engineering-yugi
+```
+
+## 2. Create a Virtual Environment
+
+**Windows:**
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+**macOS/Linux:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+## 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## 4. Run the Ingestion Script
+
+```bash
+python scripts/ingest.py
+```
+
+This fetches the FIES income, ASPBI ICT, and internet usage datasets directly and saves them to `data/raw/`.
